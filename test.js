@@ -6,8 +6,8 @@ import moment from 'moment';
 const urlsProveedores = 
 ['https://www.egsa.com.ar/descargas/egsalista1.xls',
 'https://www.egsa.com.ar/descargas/egsalista2.xls',
-'https://mm.sistorga.com.ar/web/ofertaFile/MovimientoMecanico/lista de precios movmec 27-11-2023.xls',
- 'https://etman.com.ar/micuenta/generador_listas/5615.csv',
+'https://mm.sistorga.com.ar/web/ofertaFile/MovimientoMecanico/lista de precios movmec 05-12-2023.xls',
+'https://etman.com.ar/micuenta/generador_listas/5615.csv',
 'https://www.carlosvazquez.net/es/clientes/gen_xls_linea.php?numero_linea=TODAS&numero_cliente=37564']
 const fechaActual = moment().format('DDMMYY');
 console.log(fechaActual)
