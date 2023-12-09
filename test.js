@@ -24,6 +24,10 @@ const proveedores = [
   {
     url: 'https://www.carlosvazquez.net/es/clientes/gen_xls_linea.php?numero_linea=TODAS&numero_cliente=37564',
     alias: 'carlosvazquez'
+  },
+  {
+    url:'https://login.rodamet.com/General/BajarLista.php?Archivo=LISTA_COMPLETA_20231206.xls',
+    alias:'Rodamet'
   }
 ];
 
