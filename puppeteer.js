@@ -18,6 +18,9 @@ const iniciarSesion = async () => {
     await page.click('.btn.btn-block.btn-info');
     await page.waitForNavigation();
   
+ 
+
+
     // Simular clic en el botón de exportación
     await page.click('.btn.btn-success.btn-block'); // Reemplaza con el selector correcto
   
