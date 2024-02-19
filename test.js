@@ -6,11 +6,11 @@ const dynamicDate = moment().format('DD-MM-YY');
 
 const proveedores = [
   {
-    url: 'https://www.egsa.com.ar/descargas/egsalista1.xls',
+    url: 'https://www.egsa.com.ar/descargas/egsalista1.zip',
     alias: 'Goyanarte 1'
   },
   {
-    url: 'https://www.egsa.com.ar/descargas/egsalista2.xls',
+    url: 'https://www.egsa.com.ar/descargas/egsalista2.zip',
     alias: 'Goyanarte 2'
   },
   {
@@ -19,14 +19,14 @@ const proveedores = [
   },
   {
     url: 'https://etman.com.ar/micuenta/generador_listas/5615.csv',
-    alias: 'etman'
+    alias: 'etman.csv'
   },
   {
     url: 'https://www.carlosvazquez.net/es/clientes/gen_xls_linea.php?numero_linea=TODAS&numero_cliente=37564',
     alias: 'carlosvazquez'
   },
   {
-    url:'https://login.rodamet.com/General/BajarLista.php?Archivo=LISTA_COMPLETA_20231206.xls',
+    url:'https://login.rodamet.com/General/BajarLista.php?Archivo=LISTA_COMPLETA_20231215.xls',
     alias:'Rodamet'
   }
 ];
@@ -45,15 +45,15 @@ async function descargarArchivo() {
         const { url, alias } = proveedor;
 
         // Obtener el nombre del archivo desde el mapeo de alias
-        let nombreArchivo = `${dynamicDate} ${alias}.xls`;
+        let nombreArchivo = `${dynamicDate} ${alias}`;
 
         // Verificar que el archivo tenga la extensión ".xls"
-        if (!nombreArchivo.toLowerCase().endsWith('.xls')) {
+       /* if (!nombreArchivo.toLowerCase().endsWith('.xls') && !nombreArchivo.toLowerCase().endsWith('.csv')) {
           console.log(`El archivo ${nombreArchivo} no tiene la extensión ".xls". Cambiando la extensión a ".xls".`);
 
           // Cambiar la extensión del archivo a ".xls"
           nombreArchivo += '.xls';
-        }
+        }*/
 
         // Realizar la solicitud HTTP para descargar el archivo
         const response = await axios.get(url, { responseType: 'arraybuffer' });
